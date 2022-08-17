@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Comfy</title>
+  </head>
+  <body>
+    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <div class="Home">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item active pl-3">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+          <li class="nav-item active pl-3">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        </div>
+        <div class="heading">
+          <h2>Comfy</h2>
+        </div>
+
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <span class="cart-item-count">1</span>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </div>
+
+  <section class="page-hero  d-flex align-items-center">
+      <div class="container">
+      <div class="section-center">
+        <h3 class="page-hero-title">Home / Products</h3>
+      </div>
+    </div>
+    </section>
+    <div class="container d-flex">
+    <section class="products mr-3">
+      <!-- filters -->
+      <div class="filters">
+        <div class="filters-container">
+          <!-- search -->
+          <form class="input-form">
+            <input type="text" class="search-input" id="myInput" onkeyup="myFunction()" placeholder="search..." />
+          </form>
+          <!-- categories -->
+          <h4>Company</h4>
+          <article class="companies">
+            <button class="company-btn" id="all">all</button>
+            <button class="company-btn" id="ikea" onclick="Compare('ikea')">ikea</button>
+            <button class="company-btn" id="Marcos" onclick="Compare('Marcos')">Marcos</button>
+            <button class="company-btn" id="Caresa" onclick="Compare('Caresa')">Caresa</button>
+            <button class="company-btn" id="Liddy" onclick="Compare('Liddy')">Liddy</button>
+          </article>
+          <!-- price -->
+          <h4>Price</h4>
+          <form class="price-form">
+            <input
+              type="range"
+              class="price-filter"
+              min="0"
+              value="50"
+              max="80"
+              id="myRange"
+              onclick="mySliderFunction()"
+            />
+          </form>
+          <p>Value:$ <span id="demo"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container img-holder">
+   <div class="product-img d-flex">
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">High-Back Bench by ikea</p>
+      <h6 class="price text-center">$8.99</h6>
+    </div>
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Albany Table by Marcos</p>
+      <h6 class="price text-center">$9.99</h6>
+    </div>
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Leather sofa by Marcos</p>
+      <h6 class="price text-center">$9.99</h6>
+    </div>
+   </div>
+   <div class="product-img d-flex">
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Accent Chair by ikea</p>
+      <h6 class="price text-center">$19.99</h6>
+    </div>
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Wooden table by Marcos</p>
+      <h6 class="price text-center">$39.99</h6>
+    </div>
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Dining Table by ikea</p>
+      <h6 class="price text-center">$45.99</h6>
+    </div>
+   </div>
+   <div class="product-img d-flex">
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Sofa set by Liddy</p>
+      <h6 class="price text-center">$43.99</h6>
+    </div>
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Modern Bookshelf by Caresa</p>
+      <h6 class="price text-center">$29.99</h6>
+    </div>
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Emperor Bed by Liddy</p>
+      <h6 class="price text-center">$16.99</h6>
+    </div>
+   </div>
+   <div class="product-img d-flex">
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Utopia sofa by Caresa</p>
+      <h6 class="price text-center">$43.99</h6>
+    </div>
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Entertainment Center by Liddy</p>
+      <h6 class="price text-center">$69.99</h6>
+    </div>
+    <div class="list">
+      <img src="./images/andrej-lisakov-3A4XZUopCJA-unsplash.jpg" alt="" srcset="">
+      <p class="name text-center mt-1">Albany Sectional by Caresa</p>
+      <h6 class="price text-center">$77.99</h6>
+    </div>
+   </div>
+    </div>
+      </div>
+
+
+      <script src="script.js"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
